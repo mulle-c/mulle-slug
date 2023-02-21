@@ -1,0 +1,4 @@
+## Acknowledgments
+
+This is a C port of [C++ Slugify](https://github.com/thomasbrueggemann/cpp-slugify)
+with a different, probably much faster, algorithm.

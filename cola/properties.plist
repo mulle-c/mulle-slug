@@ -1,0 +1,31 @@
+{
+   project =
+   {
+      description="🐌 Creates URL slugs";
+      domain="github";
+      name="mulle-slugify";
+      username="mulle-c";
+      reponame="mulle-slugify";
+      homepage="https://github.com/mulle-c/mulle-slugify";
+      license="BSD-3-License"
+   };
+   dependencies =
+   (
+      {
+         description="🔤 UTF8-16-32 analysis and manipulation library";
+         domain="github";
+         name="mulle-utf";
+         repo="mulle-utf";
+         url="https://github.com/mulle-c/mulle-utf";
+         user="mulle-c";
+      },
+      {
+         description="↗️ A growable C char array and also a stream";
+         domain="github";
+         name="mulle-buffer";
+         repo="mulle-buffer";
+         url="https://github.com/mulle-c/mulle-buffer";
+         user="mulle-c";
+      }
+   )
+}

@@ -1,0 +1,2 @@
+mulle-utf;${MULLE__UTF_NODETYPE:-tar};no-all-load,no-cmake-loader,no-cmake-searchpath,no-import;BC0B1EFF-8729-41C3-8B59-C2303C2B7BBD;${MULLE__UTF_URL:-https://github.com/mulle-c/mulle-utf/archive/${MULLE_TAG}.tar.gz};${MULLE__UTF_BRANCH};${MULLE__UTF_TAG:-latest};;
+mulle-buffer;${MULLE__BUFFER_NODETYPE:-tar};no-all-load,no-cmake-loader,no-cmake-searchpath,no-import;5A946494-58FA-483C-A398-483B66687AF6;${MULLE__BUFFER_URL:-https://github.com/mulle-c/mulle-buffer/archive/${MULLE_TAG}.tar.gz};${MULLE__BUFFER_BRANCH};${MULLE__BUFFER_TAG:-latest};;

@@ -1,0 +1,2 @@
+Create a "slug" from some arbitrary text, suitable for includsion in
+a URL. So the string "Take me home!" as a slug will be "Take-me-home".
