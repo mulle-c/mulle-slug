@@ -3,11 +3,11 @@
    {
       description="🐌 Creates URL slugs";
       domain="github";
-      name="mulle-slugify";
-      username="mulle-c";
-      reponame="mulle-slugify";
-      homepage="https://github.com/mulle-c/mulle-slugify";
-      license="BSD-3-License"
+      name="mulle-slug";
+      user="mulle-c";
+      repo="mulle-slug";
+      homepage="https://github.com/mulle-c/mulle-slug";
+      license="UNLICENSED"
    };
    dependencies =
    (

@@ -1,0 +1,21 @@
+{
+   "name" : "mulle-slug",
+   "version" : "0.0.1",
+   "description" : "Creates URL slugs",
+   "keywords" : [],
+   "license" : "UNLICENSED",
+   "repo" : "mulle-c/mulle-slug",
+   "src" : [
+      "src/generic/include-private.h",
+      "src/generic/include.h",
+      "src/map.inc",
+      "src/mulle-slug.c",
+      "src/mulle-slug.h",
+      "src/reflect/_mulle-slug-include-private.h",
+      "src/reflect/_mulle-slug-include.h"
+   ],
+   "dependencies" : {
+      "mulle-c/mulle-utf": "*",
+      "mulle-c/mulle-buffer": "*"
+   }
+}

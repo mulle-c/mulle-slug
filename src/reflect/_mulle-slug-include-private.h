@@ -11,8 +11,8 @@
  *
  */
 
-#ifndef _mulle_slugify_include_private_h__
-#define _mulle_slugify_include_private_h__
+#ifndef _mulle_slug_include_private_h__
+#define _mulle_slug_include_private_h__
 
 /* no headers */
 

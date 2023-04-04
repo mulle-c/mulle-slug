@@ -8,7 +8,7 @@
 #
 cmake_minimum_required( VERSION 3.13)
 
-project( mulle-slugify C)
+project( mulle-slug C)
 
 
 set( MULLE_PROJECT_TYPE "Library")
@@ -31,7 +31,7 @@ include( IDESupport OPTIONAL)
 
 include( Dependencies OPTIONAL)
 
-set( EXECUTABLE_SOURCES ${GENERATOR_SOURCES})
+set( EXECUTABLE_SOURCES ${SOURCES_NO_CLIB})
 set( EXECUTABLE_NAME map-generator)
 
 include( Executable OPTIONAL)
@@ -58,8 +58,8 @@ add_custom_command(
 
 if( HEADER_PHASE)
    install( FILES ${INSTALL_PUBLIC_HEADERS}  DESTINATION "include/${PROJECT_NAME}")
-   install( FILES ${INSTALL_PRIVATE_HEADERS} DESTINATION "include/${PROJECT_NAME}/private")
-   install( FILES ${CMAKE_INCLUDES}          DESTINATION "include/${PROJECT_NAME}/cmake")
+   install( FILES ${INSTALL_PRIVATE_HEADERS} DESTINATION "include/${PROJECT_NAME}")
+   install( FILES ${INSTALL_CMAKE_INCLUDES}          DESTINATION "include/${PROJECT_NAME}/cmake")
 
    # short cut out
    if( NOT COMPILE_PHASE AND NOT LINK_PHASE)

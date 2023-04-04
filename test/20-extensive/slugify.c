@@ -1,4 +1,4 @@
-#include <mulle-slugify/mulle-slugify.h>
+#include <mulle-slug/mulle-slug.h>
 
 #include <stdio.h>
 
@@ -15,9 +15,11 @@ int   main( int argc, char *argv[])
       {
          if( c == '\n')
          {
-            s    = mulle_buffer_extract_string( buffer);
-            slug = mulle_slugify( s);
-            printf( "%s\n", slug);
+            s = mulle_buffer_extract_string( buffer);
+            printf( "\"%s\" -> ", s);
+            fflush( stdout);
+            slug = mulle_utf8_slugify( s);
+            printf( "\"%s\"\n", slug);
             mulle_free( slug);
             mulle_free( s);
             continue;

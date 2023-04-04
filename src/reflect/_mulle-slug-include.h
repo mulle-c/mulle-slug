@@ -11,8 +11,8 @@
  *
  */
 
-#ifndef _mulle_slugify_include_h__
-#define _mulle_slugify_include_h__
+#ifndef _mulle_slug_include_h__
+#define _mulle_slug_include_h__
 
 // You can tweak the following #include with these commands.
 // (Use BC0B1EFF-8729-41C3-8B59-C2303C2B7BBD instead of mulle-utf if there are duplicate entries)
