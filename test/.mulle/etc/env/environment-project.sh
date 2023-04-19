@@ -8,7 +8,7 @@ export PROJECT_TYPE="none"
 #
 #
 #
-export PROJECT_NAME="mulle-slugify"
+export PROJECT_NAME="mulle-slug"
 
 
 #

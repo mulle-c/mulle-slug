@@ -1,15 +1,22 @@
-# mulle-slugify
+# mulle-slug
 
 #### 🐌 Creates URL slugs
 
-Create a "slug" from some arbitrary text, suitable for includsion in
-a URL. So the string "Take me home!" as a slug will be "Take-me-home".
-
+Create a [slug](https://de.ryte.com/wiki/Slug) from some arbitrary text,
+suitable for inclusion in a URL as a path or fragment. So the string
+"## Take me home!" as a slug will be "Take-me-home".
 | Release Version                                       | Release Notes
 |-------------------------------------------------------|--------------
-| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/mulle-c/mulle-slugify.svg?branch=release) [![Build Status](https://github.com/mulle-c/mulle-slugify/workflows/CI/badge.svg?branch=release)](//github.com/mulle-c/mulle-slugify/actions)| [RELEASENOTES](RELEASENOTES.md) |
+| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/mulle-c/mulle-slug.svg?branch=release) [![Build Status](https://github.com/mulle-c/mulle-slug/workflows/CI/badge.svg?branch=release)](//github.com/mulle-c/mulle-slug/actions)| [RELEASENOTES](RELEASENOTES.md) |
 
 
+
+
+
+
+### You are here
+
+![Overview](overview.dot.svg)
 
 
 
@@ -17,18 +24,18 @@ a URL. So the string "Take me home!" as a slug will be "Take-me-home".
 
 ## Add
 
-Use [mulle-sde](//github.com/mulle-sde) to add mulle-slugify to your project:
+Use [mulle-sde](//github.com/mulle-sde) to add mulle-slug to your project:
 
 ``` sh
-mulle-sde add github:mulle-c/mulle-slugify
+mulle-sde add github:mulle-c/mulle-slug
 ```
 
-To only add the sources of mulle-slugify with dependency
+To only add the sources of mulle-slug with dependency
 sources use [clib](https://github.com/clibs/clib):
 
 
 ``` sh
-clib install --out src/mulle-c mulle-c/mulle-slugify
+clib install --out src/mulle-c mulle-c/mulle-slug
 ```
 
 Add `-isystem src/mulle-c` to your `CFLAGS` and compile all the sources that were downloaded with your project.
@@ -38,11 +45,11 @@ Add `-isystem src/mulle-c` to your `CFLAGS` and compile all the sources that wer
 
 ### Install with mulle-sde
 
-Use [mulle-sde](//github.com/mulle-sde) to build and install mulle-slugify and all dependencies:
+Use [mulle-sde](//github.com/mulle-sde) to build and install mulle-slug and all dependencies:
 
 ``` sh
 mulle-sde install --prefix /usr/local \
-   https://github.com/mulle-c/mulle-slugify/archive/latest.tar.gz
+   https://github.com/mulle-c/mulle-slug/archive/latest.tar.gz
 ```
 
 ### Manual Installation
@@ -54,7 +61,7 @@ Install the requirements:
 | [mulle-utf](https://github.com/mulle-c/mulle-utf)             | 🔤 UTF8-16-32 analysis and manipulation library
 | [mulle-buffer](https://github.com/mulle-c/mulle-buffer)             | ↗️ A growable C char array and also a stream
 
-Install **mulle-slugify** into `/usr/local` with [cmake](https://cmake.org):
+Install **mulle-slug** into `/usr/local` with [cmake](https://cmake.org):
 
 ``` sh
 cmake -B build \
@@ -73,5 +80,6 @@ with a different, probably much faster, algorithm.
 ## Author
 
 [Nat!](https://mulle-kybernetik.com/weblog) for Mulle kybernetiK
+
 
 

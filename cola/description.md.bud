@@ -1,2 +1,3 @@
-Create a "slug" from some arbitrary text, suitable for includsion in
-a URL. So the string "Take me home!" as a slug will be "Take-me-home".
+Create a [slug](https://de.ryte.com/wiki/Slug) from some arbitrary text,
+suitable for inclusion in a URL as a path or fragment. So the string
+"## Take me home!" as a slug will be "Take-me-home".

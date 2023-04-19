@@ -8,9 +8,9 @@ if( MULLE_TRACE_INCLUDE)
 endif()
 
 #
-# contents selected with patternfile ??-source--generator-sources
+# contents selected with patternfile ??-source--sources-no-clib
 #
-set( GENERATOR_SOURCES
+set( SOURCES_NO_CLIB
 src/generate-map.c
 )
 
@@ -18,5 +18,5 @@ src/generate-map.c
 # contents selected with patternfile ??-source--sources
 #
 set( SOURCES
-src/mulle-slugify.c
+src/mulle-slug.c
 )

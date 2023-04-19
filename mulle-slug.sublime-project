@@ -1,6 +1,6 @@
 {
-   "sublimegdb_workingdir": "${folder:kitchen/Debug/mulle-slugify}",
-   "sublimegdb_commandline": "mulle-gdb --interpreter=mi kitchen/Debug/mulle-slugify",
+   "sublimegdb_workingdir": "${folder:kitchen/Debug/mulle-slug}",
+   "sublimegdb_commandline": "mulle-gdb --interpreter=mi kitchen/Debug/mulle-slug",
    "folders":
    [
       {

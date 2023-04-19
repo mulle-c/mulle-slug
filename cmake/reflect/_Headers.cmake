@@ -20,7 +20,7 @@ src/reflect
 # contents selected with patternfile ??-header--private-generated-headers
 #
 set( PRIVATE_GENERATED_HEADERS
-src/reflect/_mulle-slugify-include-private.h
+src/reflect/_mulle-slug-include-private.h
 )
 
 #
@@ -34,7 +34,7 @@ src/generic/include-private.h
 # contents selected with patternfile ??-header--public-generated-headers
 #
 set( PUBLIC_GENERATED_HEADERS
-src/reflect/_mulle-slugify-include.h
+src/reflect/_mulle-slug-include.h
 )
 
 #
@@ -48,7 +48,6 @@ src/generic/include.h
 # contents selected with patternfile ??-header--public-headers
 #
 set( PUBLIC_HEADERS
-src/map.inc
-src/mulle-slugify.h
+src/mulle-slug.h
 )
 
