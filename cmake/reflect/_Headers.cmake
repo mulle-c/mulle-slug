@@ -17,6 +17,13 @@ src/reflect
 )
 
 #
+# contents selected with patternfile ??-header--other-headers
+#
+set( OTHER_HEADERS
+src/map.inc
+)
+
+#
 # contents selected with patternfile ??-header--private-generated-headers
 #
 set( PRIVATE_GENERATED_HEADERS
