@@ -5,6 +5,7 @@
 Create a [slug](https://de.ryte.com/wiki/Slug) from some arbitrary text,
 suitable for inclusion in a URL as a path or fragment. So the string
 "## Take me home!" as a slug will be "Take-me-home".
+
 | Release Version                                       | Release Notes
 |-------------------------------------------------------|--------------
 | ![Mulle kybernetiK tag](https://img.shields.io/github/tag/mulle-c/mulle-slug.svg?branch=release) [![Build Status](https://github.com/mulle-c/mulle-slug/workflows/CI/badge.svg?branch=release)](//github.com/mulle-c/mulle-slug/actions)| [RELEASENOTES](RELEASENOTES.md) |
@@ -23,6 +24,13 @@ suitable for inclusion in a URL as a path or fragment. So the string
 
 
 ## Add
+
+**This project is a component of the [mulle-core](//github.com/mulle-core/mulle-core) library. As such you usually will *not* add or install it
+individually, unless you specifically do not want to link against
+`mulle-core`.**
+
+
+### Add as an individual component
 
 Use [mulle-sde](//github.com/mulle-sde) to add mulle-slug to your project:
 
