@@ -360,7 +360,7 @@ int  main( void)
 {
    int            i;
    int            n;
-   mulle_utf8_t   *walk;
+   char   *walk;
    char           *sep;
 
    n = sizeof( map) / sizeof( map[ 0]);
@@ -374,7 +374,7 @@ int  main( void)
       // just a sanity check in case table gets edited
       assert( strcspn( map[ i].ascii, " \t\r\n&<>|$") == strlen( map[ i].ascii));
 
-      walk          = (mulle_utf8_t *) map[ i].utf8;
+      walk          = (char *) map[ i].utf8;
       map[ i].utf32 = mulle_utf8_next_utf32character( &walk);
 
       // can only do one UTF32

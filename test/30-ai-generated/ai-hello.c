@@ -2,6 +2,7 @@
 
 #include <mulle-buffer/mulle-buffer.h>
 #include <mulle-utf/mulle-utf.h>
+#include <mulle-slug/mulle-slug.h>
 
 
 void test_mulle_buffer_slugify_utf8data(const char *input) {
@@ -9,7 +10,7 @@ void test_mulle_buffer_slugify_utf8data(const char *input) {
     mulle_buffer_init(&buffer, NULL);
     
     struct mulle_utf8data data;
-    data.characters = (mulle_utf8_t *)input;
+    data.characters = (char *)input;
     data.length = strlen(input);
     
     mulle_buffer_slugify_utf8data(&buffer, data);

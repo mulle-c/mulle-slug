@@ -30,8 +30,8 @@ void  mulle_buffer_slugify_utf8data( struct mulle_buffer *buffer,
 {
    mulle_utf32_t      c;
    mulle_utf32_t      prev;
-   mulle_utf8_t       *walk;
-   mulle_utf8_t       *sentinel;
+   char       *walk;
+   char       *sentinel;
    struct map_entry   *p;
    int                first;
    int                last;
@@ -162,7 +162,7 @@ char   *mulle_utf8_slugify( char *s)
    if( ! s)
       return( NULL);
 
-   data = mulle_utf8data_make( (mulle_utf8_t *) s, -1);
+   data = mulle_utf8data_make( (char *) s, -1);
    slug = mulle_utf8data_slugify( data, NULL);
    if( ! slug.length)
       return( mulle_strdup( ""));
