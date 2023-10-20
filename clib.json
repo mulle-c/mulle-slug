@@ -1,7 +1,7 @@
 {
    "name" : "mulle-slug",
-   "version" : "0.0.1",
-   "description" : "Creates URL slugs",
+   "version" : "0.0.2",
+   "description" : "🐌 Creates URL slugs",
    "keywords" : [],
    "license" : "UNLICENSED",
    "repo" : "mulle-c/mulle-slug",
@@ -12,7 +12,8 @@
       "src/mulle-slug.c",
       "src/mulle-slug.h",
       "src/reflect/_mulle-slug-include-private.h",
-      "src/reflect/_mulle-slug-include.h"
+      "src/reflect/_mulle-slug-include.h",
+      "src/reflect/_mulle-slug-versioncheck.h"
    ],
    "dependencies" : {
       "mulle-c/mulle-utf": "*",

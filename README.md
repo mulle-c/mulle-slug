@@ -12,7 +12,57 @@ suitable for inclusion in a URL as a path or fragment. So the string
 
 
 
+## API
 
+### `mulle_slugify`
+
+```c
+char *mulle_slugify(char *dst, size_t dst_len, char const *src, size_t src_len);
+```
+
+This function creates a URL slug from the given source string `src` and stores
+it in the destination buffer `dst`. The `dst_len` parameter specifies the size
+of the destination buffer, and `src_len` specifies the length of the source string.
+
+### `mulle_slugify_with_delimiter`
+
+```c
+char *mulle_slugify_with_delimiter(char *dst, size_t dst_len, char const *src, size_t src_len, char delimiter);
+```
+
+This function is similar to `mulle_slugify`, but it allows you to specify a
+custom delimiter character instead of the default hyphen `-`.
+
+### Example Code
+
+Here's an example of how to use the mulle-slug library:
+
+```c
+#include <stdio.h>
+#include <string.h>
+#include <mulle-slug/mulle-slug.h>
+
+int main() {
+    const char *input = "## Take me home!";
+    size_t input_len = strlen(input);
+    char output[256];
+
+    mulle_slugify(output, sizeof(output), input, input_len);
+
+    printf("Input: %s\n", input);
+    printf("Slugified: %s\n", output);
+
+    return 0;
+}
+```
+
+This example demonstrates how to use the `mulle_slugify` function to create a
+URL slug from the given input string. The output will be:
+
+```
+Input: ## Take me home!
+Slugified: Take-me-home
+```
 
 
 ### You are here
@@ -68,6 +118,8 @@ Install the requirements:
 |----------------------------------------------|-----------------------
 | [mulle-utf](https://github.com/mulle-c/mulle-utf)             | 🔤 UTF8-16-32 analysis and manipulation library
 | [mulle-buffer](https://github.com/mulle-c/mulle-buffer)             | ↗️ A growable C char array and also a stream
+
+Download the latest [tar](https://github.com/mulle-c/mulle-slug/archive/refs/tags/latest.tar.gz) or [zip](https://github.com/mulle-c/mulle-slug/archive/refs/tags/latest.zip) archive and unpack it.
 
 Install **mulle-slug** into `/usr/local` with [cmake](https://cmake.org):
 

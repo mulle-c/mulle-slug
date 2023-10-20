@@ -42,6 +42,7 @@ src/generic/include-private.h
 #
 set( PUBLIC_GENERATED_HEADERS
 src/reflect/_mulle-slug-include.h
+src/reflect/_mulle-slug-versioncheck.h
 )
 
 #
