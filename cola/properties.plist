@@ -1,4 +1,10 @@
 {
+   config =
+   {
+      showButtons = YES;
+      showCoverage = YES;
+      showCodacy = NO;
+   };
    project =
    {
       description="🐌 Creates URL slugs";
@@ -7,7 +13,7 @@
       user="mulle-c";
       repo="mulle-slug";
       homepage="https://github.com/mulle-c/mulle-slug";
-      license="UNLICENSED"
+      license="BSD-3-Clause"
    };
    dependencies =
    (

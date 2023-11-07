@@ -3,12 +3,24 @@
 #### 🐌 Creates URL slugs
 
 Create a [slug](https://de.ryte.com/wiki/Slug) from some arbitrary text,
-suitable for inclusion in a URL as a path or fragment. So the string
-"## Take me home!" as a slug will be "Take-me-home".
+suitable for inclusion in a URL as a path or fragment.
+
+#### What is a Slug?
+
+A slug is a URL-safe representation of a page title, often used in web
+development to create clean and readable URLs.
+Slugs are typically all lowercase and replace spaces with hyphens, making them
+more human-friendly than raw URL-encoded strings.
+For example, the page title "A Beginner's Guide to Web Development" could have
+the slug "a-beginners-guide-to-web-development". The term "slug" is derived
+from the publishing industry, where it refers to a short, descriptive label for
+an article or story. **mulle-slug** preserves case though.
+
+
 
 | Release Version                                       | Release Notes
 |-------------------------------------------------------|--------------
-| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/mulle-c/mulle-slug.svg?branch=release) [![Build Status](https://github.com/mulle-c/mulle-slug/workflows/CI/badge.svg?branch=release)](//github.com/mulle-c/mulle-slug/actions)| [RELEASENOTES](RELEASENOTES.md) |
+| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/mulle-c/mulle-slug.svg?branch=release) [![Build Status](https://github.com/mulle-c/mulle-slug/workflows/CI/badge.svg?branch=release)](//github.com/mulle-c/mulle-slug/actions) ![Coverage](https://img.shields.io/badge/coverage-100%25%C2%A0-2acf49) | [RELEASENOTES](RELEASENOTES.md) |
 
 
 
@@ -139,7 +151,7 @@ with a different, probably much faster, algorithm.
 
 ## Author
 
-[Nat!](https://mulle-kybernetik.com/weblog) for Mulle kybernetiK
+[Nat!](https://mulle-kybernetik.com/weblog) for Mulle kybernetiK  
 
 
 

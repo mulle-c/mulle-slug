@@ -1,0 +1,21 @@
+{
+    "branch_covered": 42,
+    "branch_percent": 97.7,
+    "branch_total": 43,
+    "files": [
+        {
+            "branch_covered": 42,
+            "branch_percent": 0.977,
+            "branch_total": 43,
+            "filename": "mulle-slug.c",
+            "line_covered": 69,
+            "line_percent": 1.0,
+            "line_total": 69
+        }
+    ],
+    "gcovr/summary_format_version": "0.2",
+    "line_covered": 69,
+    "line_percent": 100.0,
+    "line_total": 69,
+    "root": "../../src"
+}
