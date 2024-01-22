@@ -3,7 +3,7 @@
    "version" : "0.0.2",
    "description" : "🐌 Creates URL slugs",
    "keywords" : [],
-   "license" : "BSD-3-Clause",
+   "license" : "UNLICENSED",
    "repo" : "mulle-c/mulle-slug",
    "src" : [
       "src/generic/include-private.h",
