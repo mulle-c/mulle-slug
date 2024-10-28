@@ -39,3 +39,4 @@ test*/**/*.exe
 
 cola/wilted/
 cola/coverage.json
+cmake-build-*/

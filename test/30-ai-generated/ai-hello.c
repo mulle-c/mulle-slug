@@ -7,7 +7,7 @@
 
 void test_mulle_buffer_slugify_utf8data(const char *input) {
     struct mulle_buffer buffer;
-    mulle_buffer_init(&buffer, NULL);
+    mulle_buffer_init_default(&buffer);
     
     struct mulle_utf8data data;
     data.characters = (char *)input;
