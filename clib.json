@@ -1,6 +1,6 @@
 {
    "name" : "mulle-slug",
-   "version" : "0.0.2",
+   "version" : "0.0.3",
    "description" : "🐌 Creates URL slugs",
    "keywords" : [],
    "license" : "UNLICENSED",
