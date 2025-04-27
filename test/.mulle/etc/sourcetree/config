@@ -1,0 +1,1 @@
+mulle-slug;${MULLE__SLUG_NODETYPE:-tar};;EA29A1A7-177B-4642-A8F2-9C3ADB518BD5;${MULLE__SLUG_URL:-https://github.com/mulle-c/mulle-slug/archive/${MULLE_TAG}.tar.gz};${MULLE__SLUG_BRANCH};${MULLE__SLUG_TAG:-latest};;
