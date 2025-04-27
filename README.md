@@ -18,9 +18,9 @@ an article or story. **mulle-slug** preserves case though.
 
 
 
-| Release Version                                       | Release Notes
-|-------------------------------------------------------|--------------
-| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/mulle-c/mulle-slug.svg) [![Build Status](https://github.com/mulle-c/mulle-slug/workflows/CI/badge.svg)](//github.com/mulle-c/mulle-slug/actions) ![Coverage](https://img.shields.io/badge/coverage-100%25%C2%A0-2acf49) | [RELEASENOTES](RELEASENOTES.md) |
+| Release Version                                       | Release Notes  | AI Documentation
+|-------------------------------------------------------|----------------|---------------
+| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/mulle-c/mulle-slug.svg) [![Build Status](https://github.com/mulle-c/mulle-slug/workflows/CI/badge.svg)](//github.com/mulle-c/mulle-slug/actions) ![Coverage](https://img.shields.io/badge/coverage-100%25%C2%A0-2acf49) | [RELEASENOTES](RELEASENOTES.md) | [DeepWiki for mulle-slug](https://deepwiki.com/mulle-c/mulle-slug)
 
 
 

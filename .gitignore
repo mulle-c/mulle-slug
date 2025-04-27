@@ -40,3 +40,6 @@ test*/**/*.exe
 cola/wilted/
 cola/coverage.json
 cmake-build-*/
+*.bak
+.mulle/etc/make/build-dir
+vgcore.*
