@@ -1,11 +1,5 @@
-### 0.0.4
+### 0.0.5
 
-Various small improvements
 
-### 0.0.3
-
-Various small improvements
-
-### 0.0.2
-
-* Various small improvements
+* added vibecoding setup step to quickstart guide
+* clarified workflow with "skip Add step" note after quickstart
