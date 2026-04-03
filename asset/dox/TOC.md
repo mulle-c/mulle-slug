@@ -1,4 +1,5 @@
 # mulle-slug Library Documentation for AI
+<!-- Keywords: url-slugs, text-normalization -->
 
 ## 1. Introduction & Purpose
 
