@@ -1,3 +1,9 @@
+### 0.1.0
+
+* feature: export public API symbols and improve header portability
+* docs: improve quickstart instructions
+* maintenance: update mulle-sde tooling to version 3.5.0
+
 ### 0.0.5
 
 
