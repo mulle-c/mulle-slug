@@ -40,3 +40,9 @@ export MULLE_MATCH_FILENAMES="config:*.h:*.c:*.inc:CMakeLists.txt:*.cmake"
 
 
 
+#
+#
+#
+export vibecoding="off"
+
+
