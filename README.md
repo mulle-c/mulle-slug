@@ -24,6 +24,11 @@ an article or story. **mulle-slug** preserves case though.
 
 
 
+
+## Documentation & Guides
+
+* [API Summary](asset/dox/api/toc)
+
 ## API
 
 ### `mulle_slugify`
