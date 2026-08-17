@@ -3,10 +3,11 @@
    "version" : "0.1.1",
    "description" : "🐌 Creates URL slugs",
    "keywords" : [],
-   "license" : "UNLICENSED",
+   "license" : "BSD-3-Clause",
    "repo" : "mulle-c/mulle-slug",
    "src" : [
       "asset/dox/api/toc/index.md",
+      "src/decompose-map.inc",
       "src/generic/include-private.h",
       "src/generic/include.h",
       "src/map.inc",
@@ -19,6 +20,7 @@
    ],
    "dependencies" : {
       "mulle-c/mulle-utf": "*",
-      "mulle-c/mulle-buffer": "*"
+      "mulle-c/mulle-buffer": "*",
+      "mulle-c/mulle-unicode": "*"
    }
 }

@@ -3,21 +3,42 @@
 ### `mulle_slugify`
 
 ```c
-char *mulle_slugify(char *dst, size_t dst_len, char const *src, size_t src_len);
+char *mulle_slugify(char *dst, size_t dst_len, char *src, size_t src_len);
 ```
 
 This function creates a URL slug from the given source string `src` and stores
 it in the destination buffer `dst`. The `dst_len` parameter specifies the size
-of the destination buffer, and `src_len` specifies the length of the source string.
+of the destination buffer, and `src_len` specifies the length of the source
+string. Pass `(size_t) -1` for `src_len` to use `strlen` on a NUL-terminated
+source. Returns `dst` on success, `NULL` if `dst_len` is 0.
 
 ### `mulle_slugify_with_delimiter`
 
 ```c
-char *mulle_slugify_with_delimiter(char *dst, size_t dst_len, char const *src, size_t src_len, char delimiter);
+char *mulle_slugify_with_delimiter(char *dst, size_t dst_len, char *src, size_t src_len, char delimiter);
 ```
 
 This function is similar to `mulle_slugify`, but it allows you to specify a
 custom delimiter character instead of the default hyphen `-`.
+
+### `mulle_utf8_slugify`
+
+```c
+char *mulle_utf8_slugify(char *s);
+```
+
+Returns a `mulle_free`-able slugified copy of the NUL-terminated input string.
+Returns `NULL` if `s` is `NULL`.
+
+### `mulle_buffer_add_slugified_utf8data`
+
+```c
+void mulle_buffer_add_slugified_utf8data(struct mulle_buffer *buffer, struct mulle_utf8data data);
+```
+
+Appends the slugified form of `data` to an existing `mulle_buffer`.
+This is the zero-malloc building block — use it when constructing larger
+strings or HTML pages.
 
 ### Example Code
 
@@ -29,11 +50,10 @@ Here's an example of how to use the mulle-slug library:
 #include <mulle-slug/mulle-slug.h>
 
 int main() {
-    const char *input = "## Take me home!";
-    size_t input_len = strlen(input);
+    const char *input = "Take me home!";
     char output[256];
 
-    mulle_slugify(output, sizeof(output), input, input_len);
+    mulle_slugify(output, sizeof(output), input, strlen(input));
 
     printf("Input: %s\n", input);
     printf("Slugified: %s\n", output);
@@ -46,6 +66,6 @@ This example demonstrates how to use the `mulle_slugify` function to create a
 URL slug from the given input string. The output will be:
 
 ```
-Input: ## Take me home!
+Input: Take me home!
 Slugified: Take-me-home
 ```

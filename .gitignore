@@ -1,5 +1,6 @@
 wilted/
 *.sublime-workspace
+*.sublime-project
 .gdb_history
 mulle-template-composer-*
 mulle-markdown-preview-*.html
