@@ -263,7 +263,7 @@ struct mulle_utf8data   mulle_utf8data_slugify( struct mulle_utf8data  data,
 }
 
 
-char   *mulle_utf8_slugify( char *s)
+char   *mulle_utf8_slugify( const char *s)
 {
    struct mulle_utf8data   data;
    struct mulle_utf8data   slug;
@@ -279,7 +279,7 @@ char   *mulle_utf8_slugify( char *s)
 }
 
 
-char   *mulle_utf8_slugify_utf8( char *s)
+char   *mulle_utf8_slugify_utf8( const char *s)
 {
    struct mulle_utf8data   data;
    struct mulle_utf8data   slug;
@@ -303,7 +303,7 @@ char   *mulle_utf8_slugify_utf8( char *s)
 
 
 char  *mulle_slugify_with_delimiter( char *dst, size_t dst_len,
-                                     char *src, size_t src_len,
+                                     const char *src, size_t src_len,
                                      char delimiter)
 {
    struct mulle_utf8data   data;
@@ -339,7 +339,7 @@ char  *mulle_slugify_with_delimiter( char *dst, size_t dst_len,
 }
 
 
-char  *mulle_slugify( char *dst, size_t dst_len, char *src, size_t src_len)
+char  *mulle_slugify( char *dst, size_t dst_len, const char *src, size_t src_len)
 {
    return( mulle_slugify_with_delimiter( dst, dst_len, src, src_len, '-'));
 }

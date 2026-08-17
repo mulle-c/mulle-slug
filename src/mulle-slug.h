@@ -74,14 +74,14 @@ uint32_t   mulle_slug_get_version( void);
 // non-transliterable characters (CJK, Arabic, etc.) are dropped
 //
 MULLE__SLUG_GLOBAL
-char   *mulle_utf8_slugify( char *s);
+char   *mulle_utf8_slugify( const char *s);
 
 //
 // you get an allocated string back, that you need to mulle_free
 // non-transliterable letters (CJK, Arabic, etc.) are passed through as UTF-8
 //
 MULLE__SLUG_GLOBAL
-char   *mulle_utf8_slugify_utf8( char *s);
+char   *mulle_utf8_slugify_utf8( const char *s);
 
 //
 // you get a struct mulle_utf8data, whose characters you need to mulle_free
@@ -123,11 +123,11 @@ void  mulle_buffer_slugify_utf8data( struct mulle_buffer *buffer,
 // src_len can be (size_t) -1 for NUL-terminated strings.
 //
 MULLE__SLUG_GLOBAL
-char  *mulle_slugify( char *dst, size_t dst_len, char *src, size_t src_len);
+char  *mulle_slugify( char *dst, size_t dst_len, const char *src, size_t src_len);
 
 MULLE__SLUG_GLOBAL
 char  *mulle_slugify_with_delimiter( char *dst, size_t dst_len,
-                                     char *src, size_t src_len,
+                                     const char *src, size_t src_len,
                                      char delimiter);
 /*
  * The versioncheck header can be generated with
