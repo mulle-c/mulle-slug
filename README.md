@@ -34,21 +34,42 @@ an article or story. **mulle-slug** preserves case though.
 ### `mulle_slugify`
 
 ```c
-char *mulle_slugify(char *dst, size_t dst_len, char const *src, size_t src_len);
+char *mulle_slugify(char *dst, size_t dst_len, char *src, size_t src_len);
 ```
 
 This function creates a URL slug from the given source string `src` and stores
 it in the destination buffer `dst`. The `dst_len` parameter specifies the size
-of the destination buffer, and `src_len` specifies the length of the source string.
+of the destination buffer, and `src_len` specifies the length of the source
+string. Pass `(size_t) -1` for `src_len` to use `strlen` on a NUL-terminated
+source. Returns `dst` on success, `NULL` if `dst_len` is 0.
 
 ### `mulle_slugify_with_delimiter`
 
 ```c
-char *mulle_slugify_with_delimiter(char *dst, size_t dst_len, char const *src, size_t src_len, char delimiter);
+char *mulle_slugify_with_delimiter(char *dst, size_t dst_len, char *src, size_t src_len, char delimiter);
 ```
 
 This function is similar to `mulle_slugify`, but it allows you to specify a
 custom delimiter character instead of the default hyphen `-`.
+
+### `mulle_utf8_slugify`
+
+```c
+char *mulle_utf8_slugify(char *s);
+```
+
+Returns a `mulle_free`-able slugified copy of the NUL-terminated input string.
+Returns `NULL` if `s` is `NULL`.
+
+### `mulle_buffer_add_slugified_utf8data`
+
+```c
+void mulle_buffer_add_slugified_utf8data(struct mulle_buffer *buffer, struct mulle_utf8data data);
+```
+
+Appends the slugified form of `data` to an existing `mulle_buffer`.
+This is the zero-malloc building block — use it when constructing larger
+strings or HTML pages.
 
 ### Example Code
 
@@ -60,11 +81,10 @@ Here's an example of how to use the mulle-slug library:
 #include <mulle-slug/mulle-slug.h>
 
 int main() {
-    const char *input = "## Take me home!";
-    size_t input_len = strlen(input);
+    const char *input = "Take me home!";
     char output[256];
 
-    mulle_slugify(output, sizeof(output), input, input_len);
+    mulle_slugify(output, sizeof(output), input, strlen(input));
 
     printf("Input: %s\n", input);
     printf("Slugified: %s\n", output);
@@ -77,7 +97,7 @@ This example demonstrates how to use the `mulle_slugify` function to create a
 URL slug from the given input string. The output will be:
 
 ```
-Input: ## Take me home!
+Input: Take me home!
 Slugified: Take-me-home
 ```
 
@@ -90,80 +110,44 @@ Slugified: Take-me-home
 
 
 
-## Quickstart
-
-Install [mulle-core developer](https://github.com/MulleFoundation/foundation-developer?tab=readme-ov-file#install)
-then:
-
-
-``` sh
-mulle-sde init -d my-project -m mulle-core/c-developer executable
-cd my-project
-mulle-sde vibecoding on
-mulle-sde run
-```
-
-You are done, skip the following "Add" step.
-
-
 ## Add
 
-**This project is a component of the [mulle-core](//github.com/mulle-core/mulle-core) library.
-As such you usually will *not* add or install it individually, unless you
-specifically do not want to link against `mulle-core`.**
+mulle-slug is a component of the [mulle-core](//github.com/mulle-core/mulle-core) library. So in your code include the mulle-core umbrella header:
 
-
-### Add as an individual component
-
-Use [mulle-sde](//github.com/mulle-sde) to add mulle-slug to your project:
-
-``` sh
-mulle-sde add github:mulle-c/mulle-slug
+``` c
+#include <mulle-core/mulle-core.h>
 ```
 
-To only add the sources of mulle-slug with dependency
-sources use [clib](https://github.com/clibs/clib):
+### Add mulle-core to a cmake and git project
 
-
-``` sh
-clib install --out src/mulle-c mulle-c/mulle-slug
+``` bash
+git submodule add https://github.com/mulle-core/mulle-core.git mulle-core
 ```
 
-Add `-isystem src/mulle-c` to your `CFLAGS` and compile all the sources that were downloaded with your project.
+Add this to your `CMakeLists.txt`:
 
-
-## Install
-
-Use [mulle-sde](//github.com/mulle-sde) to build and install mulle-slug and all dependencies:
-
-``` sh
-mulle-sde install --prefix /usr/local \
-   https://github.com/mulle-c/mulle-slug/archive/latest.tar.gz
+``` cmake
+add_subdirectory( mulle-core)
+target_link_libraries( ${PROJECT_NAME} PRIVATE mulle-core)
 ```
 
-### Legacy Installation
 
-Install the requirements:
-
-| Requirements                                 | Description
-|----------------------------------------------|-----------------------
-| [mulle-utf](https://github.com/mulle-c/mulle-utf)             | 🔤 UTF8-16-32 analysis and manipulation library
-| [mulle-buffer](https://github.com/mulle-c/mulle-buffer)             | ↗️ A growable C char array and also a stream
-
-Download the latest [tar](https://github.com/mulle-c/mulle-slug/archive/refs/tags/latest.tar.gz) or [zip](https://github.com/mulle-c/mulle-slug/archive/refs/tags/latest.zip) archive and unpack it.
-
-Install **mulle-slug** into `/usr/local` with [cmake](https://cmake.org):
+### Add mulle-core to a mulle-sde project
 
 ``` sh
-PREFIX_DIR="/usr/local"
-cmake -B build                               \
-      -DMULLE_SDK_PATH="${PREFIX_DIR}"       \
-      -DCMAKE_INSTALL_PREFIX="${PREFIX_DIR}" \
-      -DCMAKE_PREFIX_PATH="${PREFIX_DIR}"    \
-      -DCMAKE_BUILD_TYPE=Release &&
-cmake --build build --config Release &&
-cmake --install build --config Release
+mulle-sde add github:mulle-core/mulle-core
 ```
+
+### Embed mulle-slug with clib
+
+``` sh
+clib install --out src mulle-c/mulle-slug
+```
+
+Append `src` to your include path (e.g. add `-isystem src`  to your `CFLAGS`)
+and compile all the sources that were downloaded.
+
+
 
 ## Acknowledgments
 

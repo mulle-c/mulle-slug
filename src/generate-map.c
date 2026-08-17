@@ -44,72 +44,15 @@ static struct map_entry
    mulle_utf32_t   utf32;
 } map[] =
 {
-{"À", "A"}, 
-{"Á", "A"}, 
-{"Â", "A"}, 
-{"Ã", "A"}, 
-{"Ä", "A"}, 
-{"Å", "A"}, 
 {"Æ", "AE"},
-{"Ç", "C"}, 
-{"È", "E"}, 
-{"É", "E"}, 
-{"Ê", "E"}, 
-{"Ë", "E"}, 
-{"Ì", "I"}, 
-{"Í", "I"},
-{"Î", "I"}, 
-{"Ï", "I"}, 
 {"Ð", "D"}, 
-{"Ñ", "N"}, 
-{"Ò", "O"}, 
-{"Ó", "O"}, 
-{"Ô", "O"},
-{"Õ", "O"}, 
-{"Ö", "O"}, 
-{"Ő", "O"}, 
 {"Ø", "O"}, 
-{"Ù", "U"}, 
-{"Ú", "U"}, 
-{"Û", "U"},
-{"Ü", "U"}, 
-{"Ű", "U"}, 
-{"Ý", "Y"}, 
 {"Þ", "TH"}, 
 {"ß", "ss"}, 
-{"à", "a"}, 
-{"á", "a"},
-{"â", "a"}, 
-{"ã", "a"}, 
-{"ä", "a"}, 
-{"å", "a"}, 
 {"æ", "ae"}, 
-{"ç", "c"}, 
-{"è", "e"},
-{"é", "e"}, 
-{"ê", "e"}, 
-{"ë", "e"}, 
-{"ì", "i"}, 
-{"í", "i"}, 
-{"î", "i"}, 
-{"ï", "i"},
 {"ð", "d"}, 
-{"ñ", "n"}, 
-{"ò", "o"}, 
-{"ó", "o"}, 
-{"ô", "o"}, 
-{"õ", "o"}, 
-{"ö", "o"},
-{"ő", "o"}, 
 {"ø", "o"}, 
-{"ù", "u"}, 
-{"ú", "u"}, 
-{"û", "u"}, 
-{"ü", "u"}, 
-{"ű", "u"},
-{"ý", "y"}, 
 {"þ", "th"}, 
-{"ÿ", "y"}, 
 {"ẞ", "SS"},
 {"α", "a"}, 
 {"β", "b"}, 
@@ -180,18 +123,7 @@ static struct map_entry
 {"Ώ", "W"}, 
 {"Ϊ", "I"},
 {"Ϋ", "Y"},
-{"ş", "s"}, 
-{"Ş", "S"}, 
 {"ı", "i"}, 
-{"İ", "I"}, 
-{"ç", "c"}, 
-{"Ç", "C"}, 
-{"ü", "u"}, 
-{"Ü", "U"},
-{"ö", "o"}, 
-{"Ö", "O"}, 
-{"ğ", "g"}, 
-{"Ğ", "G"},
 {"а", "a"}, 
 {"б", "b"}, 
 {"в", "v"}, 
@@ -266,66 +198,11 @@ static struct map_entry
 {"і", "i"}, 
 {"ї", "yi"}, 
 {"ґ", "g"},
-{"č", "c"}, 
-{"ď", "d"}, 
-{"ě", "e"}, 
-{"ň", "n"}, 
-{"ř", "r"}, 
-{"š", "s"}, 
-{"ť", "t"}, 
-{"ů", "u"},
-{"ž", "z"}, 
-{"Č", "C"}, 
-{"Ď", "D"}, 
-{"Ě", "E"}, 
-{"Ň", "N"}, 
-{"Ř", "R"}, 
-{"Š", "S"}, 
-{"Ť", "T"},
-{"Ů", "U"}, 
-{"Ž", "Z"},
-{"ą", "a"}, 
-{"ć", "c"}, 
-{"ę", "e"}, 
 {"ł", "l"}, 
-{"ń", "n"}, 
-{"ó", "o"}, 
-{"ś", "s"}, 
-{"ź", "z"},
-{"ż", "z"}, 
-{"Ą", "A"}, 
-{"Ć", "C"}, 
-{"Ę", "e"}, 
 {"Ł", "L"}, 
-{"Ń", "N"}, 
-{"Ś", "S"},
-{"Ź", "Z"}, 
-{"Ż", "Z"},
-{"ā", "a"}, 
-{"č", "c"}, 
-{"ē", "e"}, 
-{"ģ", "g"}, 
-{"ī", "i"}, 
-{"ķ", "k"}, 
-{"ļ", "l"}, 
-{"ņ", "n"},
-{"š", "s"}, 
-{"ū", "u"}, 
-{"ž", "z"}, 
-{"Ā", "A"}, 
-{"Č", "C"}, 
-{"Ē", "E"}, 
-{"Ģ", "G"}, 
-{"Ī", "i"},
-{"Ķ", "k"}, 
-{"Ļ", "L"}, 
-{"Ņ", "N"}, 
-{"Š", "S"}, 
-{"Ū", "u"}, 
-{"Ž", "Z"},
 {"€", "euro"}, 
 {"₢", "cruzeiro"}, 
-{"₣", "french-franc"},  // no space
+{"₣", "franc"},  // no space
 {"£", "pound"},
 {"₤", "lira"}, 
 {"₥", "mill"}, 
@@ -352,22 +229,19 @@ static struct map_entry
 {"₠", "ecu"}, 
 {"¤", "currency"}, 
 {"฿", "baht"}, 
-{"©", "(c)"}, 
+{"©", "c"}, 
 {"œ", "oe"}, 
 {"Œ", "OE"}, 
 {"∑", "sum"}, 
-{"®", "(r)"}, 
-{"†", "+"},
-{"“", "\\\""}, // more '\\' for output
+{"®", "r"}, 
+{"†", "cross"},
 {"∂", "d"}, 
 {"ƒ", "f"}, 
 {"™", "tm"},
 {"℠", "sm"}, 
-{"…", "..."}, 
+{"…", ""}, 
 {"˚", "o"}, 
-{"º", "o"}, 
-{"ª", "a"}, 
-{"•", "*"},
+{"•", ""},
 {"∆", "delta"}, 
 {"∞", "infinity"}, 
 {"♥", "love"}, 
@@ -394,19 +268,20 @@ int  main( void)
 {
    int            i;
    int            n;
-   char   *walk;
+   int            j;
+   char           *walk;
    char           *sep;
 
    n = sizeof( map) / sizeof( map[ 0]);
    for( i = 0; i < n; i++)
    {
       fprintf( stderr, "Converting %i \"%s\" (%ld, %ld)\n", i, map[ i].ascii,
-                                                            (long) strcspn( map[ i].ascii, " \t\r\n{}[]()/&%$!.;,_#'+~*"),
+                                                            (long) strcspn( map[ i].ascii, " \t\r\n{}[]()/&%$!.;,_#'+~*\""),
                                                             (long) strlen( map[ i].ascii));
       // don't do ascii escapes
       assert( map[ i].utf8[ 1] || map[ i].utf8[ 0] > 127);
-      // just a sanity check in case table gets edited
-      assert( strcspn( map[ i].ascii, " \t\r\n&<>|$") == strlen( map[ i].ascii));
+      // just a sanity check in case table gets edited (no slug-unsafe chars)
+      assert( strcspn( map[ i].ascii, " \t\r\n&<>|$\"()[]{}*+.!#;,") == strlen( map[ i].ascii));
 
       walk          = (char *) map[ i].utf8;
       map[ i].utf32 = mulle_utf8_next_utf32character( &walk);
@@ -417,11 +292,21 @@ int  main( void)
 
    qsort( &map, n, sizeof( map[ 0]), compare_utf32);
 
-   sep="   ";
+   // detect and skip duplicates (keep first occurrence after sort)
+   j   = 0;
+   sep = "   ";
    for( i = 0; i < n; i++)
    {
+      if( i > 0 && map[ i].utf32 == map[ i - 1].utf32)
+      {
+         fprintf( stderr, "Skipping duplicate 0x%06lx \"%s\"\n",
+                          (unsigned long) map[ i].utf32, map[ i].ascii);
+         continue;
+      }
       printf( "%s{ 0x%06lx, \"%s\" }", sep, (unsigned long) map[ i].utf32, map[ i].ascii);
-      sep=",\n   ";
+      sep = ",\n   ";
+      j++;
    }
+   fprintf( stderr, "Emitted %d entries (%d duplicates skipped)\n", j, n - j);
    return( 0);
 }

@@ -44,14 +44,16 @@ if( LINK_PHASE)
    target_link_options( "${EXECUTABLE_LINK_TARGET}" PUBLIC)
 endif()
 
-add_custom_command(
-   OUTPUT "src/map.inc"
-   COMMAND map-generator > "src/map.inc"
-   DEPENDS ${EXECUTABLE_LINK_TARGET}
-   COMMENT "Create map.inc"
-   WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}"
-   VERBATIM
-)
+if( NOT CMAKE_CROSSCOMPILING)
+   add_custom_command(
+      OUTPUT "${PROJECT_SOURCE_DIR}/src/map.inc"
+      COMMAND sh -c "LD_LIBRARY_PATH=${DEPENDENCY_DIR}/${MULLE_SDK_SUBDIR}/lib:$$LD_LIBRARY_PATH $<TARGET_FILE:${EXECUTABLE_LINK_TARGET}> > ${PROJECT_SOURCE_DIR}/src/map.inc"
+      DEPENDS ${EXECUTABLE_LINK_TARGET} "${PROJECT_SOURCE_DIR}/src/generate-map.c"
+      COMMENT "Create map.inc"
+      WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}"
+      VERBATIM
+   )
+endif()
 
 
 ### Library
@@ -70,12 +72,14 @@ endif()
 if( LINK_PHASE)
 endif()
 
-set( LIBRARY_SOURCES ${SOURCES} "src/map.inc")
+set( LIBRARY_SOURCES ${SOURCES} "${PROJECT_SOURCE_DIR}/src/map.inc")
 
 include( Library)
 
-add_dependencies( ${LIBRARY_COMPILE_TARGET}
-${EXECUTABLE_LINK_TARGET})
+if( NOT CMAKE_CROSSCOMPILING)
+   add_dependencies( ${LIBRARY_COMPILE_TARGET}
+   ${EXECUTABLE_LINK_TARGET})
+endif()
 
 
 # use LIBRARY_COMPILE_TARGET for compiler options

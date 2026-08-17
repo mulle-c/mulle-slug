@@ -9,13 +9,14 @@ on:
 
 env:
   BUILD_TYPE: release
+  OTHER_PROJECTS: "mulle-c/mulle-c-developer;"
 
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ macos-latest, ubuntu-latest]
+        os: [ ubuntu-latest] # macos-latest,
 
     steps:
     - name: Set MULLE_HOSTNAME

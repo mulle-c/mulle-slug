@@ -1,7 +1,7 @@
 "#hash" -> "hashhash"
 "$200" -> "dollar200"
 ".a+232^234" -> "a-232-234"
-"ŪŽ€₢₣£" -> "uZeurocruzeirofrench-francpound"
+"ŪŽ€₢₣£" -> "UZeurocruzeirofrancpound"
 "" -> ""
 "https://maxmuster:geheim@www.example.com:8080/index.html?p1=A&p2=B#ressource" -> "https-maxmuster-geheim-www-example-com-8080-index-html-p1-A-p2-Bhashressource"
 "mailto:max@example.org" -> "mailto-max-example-org"
