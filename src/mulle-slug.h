@@ -44,7 +44,7 @@
  *
  *  version:  major, minor, patch
  */
-#define MULLE__SLUG_VERSION  ((0UL << 20) | (1 << 8) | 1)
+#define MULLE__SLUG_VERSION  ((0UL << 20) | (2 << 8) | 0)
 
 
 static inline uint32_t   mulle_slug_get_version_major( void)

@@ -62,16 +62,15 @@ else()
          endif()
       endif()
       message( STATUS "MULLE__UTF_LIBRARY is ${MULLE__UTF_LIBRARY}")
-      #
-      # The order looks ascending, but due to the way this file is read
-      # it ends up being descending, which is what we need.
-      #
-      if( MULLE__UTF_LIBRARY)
+   endif()
+   if( MULLE__UTF_LIBRARY)
          #
          # Add MULLE__UTF_LIBRARY to DEPENDENCY_LIBRARIES list.
          # Disable with: `mulle-sourcetree mark mulle-utf no-cmake-add`
          #
-         list( APPEND DEPENDENCY_LIBRARIES ${MULLE__UTF_LIBRARY})
+         if( NOT ${MULLE__UTF_LIBRARY} IN_LIST DEPENDENCY_LIBRARIES)
+            list( APPEND DEPENDENCY_LIBRARIES ${MULLE__UTF_LIBRARY})
+         endif()
          #
          # Inherit information from dependency.
          # Encompasses: no-cmake-searchpath,no-cmake-dependency,no-cmake-loader
@@ -114,14 +113,13 @@ else()
                message( STATUS "${_TMP_MULLE__UTF_DIR} not found")
             endif()
          endforeach()
-      else()
-         # Disable with: `mulle-sourcetree mark mulle-utf no-require-link`
-         message( SEND_ERROR "MULLE__UTF_LIBRARY was not found in ${MULLE_PREFERRED_LIBRARY_PREFIX}mulle-utf${CMAKE_DEBUG_POSTFIX}${MULLE_PREFERRED_LIBRARY_SUFFIX}
+   else()
+      # Disable with: `mulle-sourcetree mark mulle-utf no-require-link`
+      message( SEND_ERROR "MULLE__UTF_LIBRARY was not found in ${MULLE_PREFERRED_LIBRARY_PREFIX}mulle-utf${CMAKE_DEBUG_POSTFIX}${MULLE_PREFERRED_LIBRARY_SUFFIX}
 ${MULLE_PREFERRED_LIBRARY_PREFIX}mulle-utf${MULLE_PREFERRED_LIBRARY_SUFFIX}
 ${MULLE_FALLBACK_LIBRARY_PREFIX}mulle-utf${CMAKE_DEBUG_POSTFIX}${MULLE_FALLBACK_LIBRARY_SUFFIX}
 ${MULLE_FALLBACK_LIBRARY_PREFIX}mulle-utf${MULLE_FALLBACK_LIBRARY_SUFFIX}
 mulle-utf")
-      endif()
    endif()
 endif()
 
@@ -162,16 +160,15 @@ else()
          endif()
       endif()
       message( STATUS "MULLE__BUFFER_LIBRARY is ${MULLE__BUFFER_LIBRARY}")
-      #
-      # The order looks ascending, but due to the way this file is read
-      # it ends up being descending, which is what we need.
-      #
-      if( MULLE__BUFFER_LIBRARY)
+   endif()
+   if( MULLE__BUFFER_LIBRARY)
          #
          # Add MULLE__BUFFER_LIBRARY to DEPENDENCY_LIBRARIES list.
          # Disable with: `mulle-sourcetree mark mulle-buffer no-cmake-add`
          #
-         list( APPEND DEPENDENCY_LIBRARIES ${MULLE__BUFFER_LIBRARY})
+         if( NOT ${MULLE__BUFFER_LIBRARY} IN_LIST DEPENDENCY_LIBRARIES)
+            list( APPEND DEPENDENCY_LIBRARIES ${MULLE__BUFFER_LIBRARY})
+         endif()
          #
          # Inherit information from dependency.
          # Encompasses: no-cmake-searchpath,no-cmake-dependency,no-cmake-loader
@@ -214,14 +211,13 @@ else()
                message( STATUS "${_TMP_MULLE__BUFFER_DIR} not found")
             endif()
          endforeach()
-      else()
-         # Disable with: `mulle-sourcetree mark mulle-buffer no-require-link`
-         message( SEND_ERROR "MULLE__BUFFER_LIBRARY was not found in ${MULLE_PREFERRED_LIBRARY_PREFIX}mulle-buffer${CMAKE_DEBUG_POSTFIX}${MULLE_PREFERRED_LIBRARY_SUFFIX}
+   else()
+      # Disable with: `mulle-sourcetree mark mulle-buffer no-require-link`
+      message( SEND_ERROR "MULLE__BUFFER_LIBRARY was not found in ${MULLE_PREFERRED_LIBRARY_PREFIX}mulle-buffer${CMAKE_DEBUG_POSTFIX}${MULLE_PREFERRED_LIBRARY_SUFFIX}
 ${MULLE_PREFERRED_LIBRARY_PREFIX}mulle-buffer${MULLE_PREFERRED_LIBRARY_SUFFIX}
 ${MULLE_FALLBACK_LIBRARY_PREFIX}mulle-buffer${CMAKE_DEBUG_POSTFIX}${MULLE_FALLBACK_LIBRARY_SUFFIX}
 ${MULLE_FALLBACK_LIBRARY_PREFIX}mulle-buffer${MULLE_FALLBACK_LIBRARY_SUFFIX}
 mulle-buffer")
-      endif()
    endif()
 endif()
 
@@ -262,16 +258,15 @@ else()
          endif()
       endif()
       message( STATUS "MULLE__UNICODE_LIBRARY is ${MULLE__UNICODE_LIBRARY}")
-      #
-      # The order looks ascending, but due to the way this file is read
-      # it ends up being descending, which is what we need.
-      #
-      if( MULLE__UNICODE_LIBRARY)
+   endif()
+   if( MULLE__UNICODE_LIBRARY)
          #
          # Add MULLE__UNICODE_LIBRARY to DEPENDENCY_LIBRARIES list.
          # Disable with: `mulle-sourcetree mark mulle-unicode no-cmake-add`
          #
-         list( APPEND DEPENDENCY_LIBRARIES ${MULLE__UNICODE_LIBRARY})
+         if( NOT ${MULLE__UNICODE_LIBRARY} IN_LIST DEPENDENCY_LIBRARIES)
+            list( APPEND DEPENDENCY_LIBRARIES ${MULLE__UNICODE_LIBRARY})
+         endif()
          #
          # Inherit information from dependency.
          # Encompasses: no-cmake-searchpath,no-cmake-dependency,no-cmake-loader
@@ -314,13 +309,12 @@ else()
                message( STATUS "${_TMP_MULLE__UNICODE_DIR} not found")
             endif()
          endforeach()
-      else()
-         # Disable with: `mulle-sourcetree mark mulle-unicode no-require-link`
-         message( SEND_ERROR "MULLE__UNICODE_LIBRARY was not found in ${MULLE_PREFERRED_LIBRARY_PREFIX}mulle-unicode${CMAKE_DEBUG_POSTFIX}${MULLE_PREFERRED_LIBRARY_SUFFIX}
+   else()
+      # Disable with: `mulle-sourcetree mark mulle-unicode no-require-link`
+      message( SEND_ERROR "MULLE__UNICODE_LIBRARY was not found in ${MULLE_PREFERRED_LIBRARY_PREFIX}mulle-unicode${CMAKE_DEBUG_POSTFIX}${MULLE_PREFERRED_LIBRARY_SUFFIX}
 ${MULLE_PREFERRED_LIBRARY_PREFIX}mulle-unicode${MULLE_PREFERRED_LIBRARY_SUFFIX}
 ${MULLE_FALLBACK_LIBRARY_PREFIX}mulle-unicode${CMAKE_DEBUG_POSTFIX}${MULLE_FALLBACK_LIBRARY_SUFFIX}
 ${MULLE_FALLBACK_LIBRARY_PREFIX}mulle-unicode${MULLE_FALLBACK_LIBRARY_SUFFIX}
 mulle-unicode")
-      endif()
    endif()
 endif()
