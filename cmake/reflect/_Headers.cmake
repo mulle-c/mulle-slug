@@ -20,6 +20,7 @@ src
 # contents selected with patternfile ??-header--other-headers
 #
 set( OTHER_HEADERS
+src/decompose-map.inc
 src/map.inc
 )
 
