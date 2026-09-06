@@ -88,3 +88,21 @@ export MULLE__BUFFER_URL="https://github.com/mulle-c/mulle-buffer.git"
 export MULLE__BUFFER_BRANCH="prerelease"
 
 
+#
+# mulle-unicode nodetype: ${MULLE__UNICODE_NODETYPE:-tar}
+#
+export MULLE__UNICODE_NODETYPE="git"
+
+
+#
+# mulle-unicode url: ${MULLE__UNICODE_URL:-https://github.com/mulle-c/mulle-unicode/archive/${MULLE_TAG}.tar.gz}
+#
+export MULLE__UNICODE_URL="https://github.com/mulle-c/mulle-unicode.git"
+
+
+#
+# mulle-unicode branch: ${MULLE__UNICODE_BRANCH}
+#
+export MULLE__UNICODE_BRANCH="prerelease"
+
+
