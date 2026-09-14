@@ -3,12 +3,13 @@
    {
       description="🐌 Creates URL slugs";
       domain="github";
+      language="c";
+      dialect="c";
       name="mulle-slug";
       user="mulle-c";
       repo="mulle-slug";
       homepage="https://github.com/mulle-c/mulle-slug";
-      license="BSD-3-Clause";
-      version="0.2.0";
+      license="UNLICENSED";
    };
    dependencies =
    (
@@ -21,7 +22,7 @@
          user="mulle-c";
       },
       {
-         description="↗️ A growable C char array and also a stream";
+         description="↗️  A growable C char array and also a stream - on stack and heap";
          domain="github";
          name="mulle-buffer";
          repo="mulle-buffer";
@@ -29,7 +30,7 @@
          user="mulle-c";
       },
       {
-         description="🈚 Unicode ctype like character classification";
+         description="🈚 Unicode ctype like library";
          domain="github";
          name="mulle-unicode";
          repo="mulle-unicode";

@@ -112,42 +112,104 @@ Slugified: Take-me-home
 
 ## Add
 
-mulle-slug is a component of the [mulle-core](//github.com/mulle-core/mulle-core) library. So in your code include the mulle-core umbrella header:
+### Add mulle-slug via mulle-core
+
+mulle-slug is a component of the
+[mulle-core](//github.com/mulle-core/mulle-core) library.
+In your code include its umbrella header:
 
 ``` c
 #include <mulle-core/mulle-core.h>
 ```
 
-### Add mulle-core to a cmake and git project
+In your project add mulle-core as a git submodule and link against it:
 
 ``` bash
-git submodule add https://github.com/mulle-core/mulle-core.git mulle-core
+git submodule add -f "https://github.com/mulle-core/mulle-core.git" \
+                     "stash/mulle-core"
+git submodule update --init --recursive
 ```
 
-Add this to your `CMakeLists.txt`:
+then add these comands to your `CMakeLists.txt`:
 
 ``` cmake
-add_subdirectory( mulle-core)
-target_link_libraries( ${PROJECT_NAME} PRIVATE mulle-core)
+include_directories( SYSTEM "stash/mulle-core/src")
+add_subdirectory( stash/mulle-core)
+target_link_libraries( ${PROJECT_NAME} PUBLIC mulle-core)
 ```
 
-
-### Add mulle-core to a mulle-sde project
+Or let [mulle-sde](//github.com/mulle-sde) do it:
 
 ``` sh
-mulle-sde add github:mulle-core/mulle-core
+mulle-sde add mulle-core/mulle-core
 ```
 
-### Embed mulle-slug with clib
+
+
+
+### Add mulle-slug as a cmake subproject
+
+In your code include its header:
+
+``` c
+#include <mulle-slug/mulle-slug.h>
+```
+
+Add mulle-slug and dependencies as git submodules and link against
+them:
+
+``` bash
+git submodule add -f --name "mulle-utf" \
+                            "https://github.com/mulle-c/mulle-utf.git" \
+                            "stash/mulle-utf"
+git submodule add -f --name "mulle-buffer" \
+                            "https://github.com/mulle-c/mulle-buffer.git" \
+                            "stash/mulle-buffer"
+git submodule add -f --name "mulle-unicode" \
+                            "https://github.com/mulle-c/mulle-unicode.git" \
+                            "stash/mulle-unicode"
+git submodule add -f --name "mulle-slug" \
+                        "https://github.com/mulle-c/mulle-slug" \
+                        "stash/mulle-slug"
+git submodule update --init --recursive
+```
+
+``` cmake
+include_directories( SYSTEM "${CMAKE_BINARY_DIR}/include")
+
+add_subdirectory( stash/mulle-utf)
+add_subdirectory( stash/mulle-buffer)
+add_subdirectory( stash/mulle-unicode)
+add_subdirectory( stash/mulle-slug)
+
+target_link_libraries( ${PROJECT_NAME} PUBLIC mulle-utf)
+target_link_libraries( ${PROJECT_NAME} PUBLIC mulle-buffer)
+target_link_libraries( ${PROJECT_NAME} PUBLIC mulle-unicode)
+target_link_libraries( ${PROJECT_NAME} PUBLIC mulle-slug)
+```
+
+Or let [mulle-sde](//github.com/mulle-sde) do it:
 
 ``` sh
-clib install --out src mulle-c/mulle-slug
+mulle-sde add github:mulle-c/mulle-slug
 ```
 
-Append `src` to your include path (e.g. add `-isystem src`  to your `CFLAGS`)
-and compile all the sources that were downloaded.
+## Individual Install
 
+Install all the prerequisites.
 
+``` bash
+PREFIX=/tmp/usr/local
+BUILD_DIR="mulle-slug/build"
+
+cmake -S "mulle-slug" -B "${BUILD_DIR}"    \
+  -DCMAKE_BUILD_TYPE="Release"                  \
+  -DCMAKE_INSTALL_PREFIX="${PREFIX}"            \
+  -DCMAKE_PREFIX_PATH="${PREFIX}"               \
+  -DCMAKE_C_FLAGS="-I"${PREFIX}"/include"       \
+&& cmake --build "${BUILD_DIR}" &&              \
+&& cmake --install "${BUILD_DIR}"
+```
 
 ## Acknowledgments
 
