@@ -5,9 +5,6 @@
 
 int   main( int argc, char *argv[])
 {
-   char   *s;
-   char   *slug;
-   int    c;
 
    mulle_buffer_do( buffer)
    {

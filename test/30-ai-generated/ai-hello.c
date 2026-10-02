@@ -16,7 +16,7 @@ void test_mulle_buffer_slugify_utf8data(const char *input) {
     mulle_buffer_slugify_utf8data(&buffer, data);
     
     printf("Input: %s\n", input);
-    printf("Output: %s\n\n", buffer._storage);
+    printf("Output: %s\n\n", (char *) mulle_buffer_get_bytes( &buffer));
     
     mulle_buffer_done(&buffer);
 }
