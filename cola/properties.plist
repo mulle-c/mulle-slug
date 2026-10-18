@@ -10,7 +10,6 @@
       repo="mulle-slug";
       homepage="https://github.com/mulle-c/mulle-slug";
       license="UNLICENSED";
-      version="0.2.1";
    };
    dependencies =
    (
