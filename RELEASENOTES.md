@@ -1,6 +1,12 @@
 ### 0.2.1
 
-Various small improvements
+
+
+
+* consumers that only do ``add_subdirectory()`` plus ``target_link_libraries()`` again find staged headers by their installed-style path (e.g. ``<mulle-core/mulle-core.h>``); without the re-enabled INTERFACE include export the build failed with "file not found"
+* force-link `(WHOLE_ARCHIVE)` propagation now requires CMake 3.30, since 3.24–3.29 aborted the generate step when a target was linked both plainly and via the wrapper; older CMake stays a silent no-op
+* the library now builds as strict C11 with extensions off, so a POSIX/BSD call is a compile error, matching the advertised "apis: ansi" claim
+* README now documents FetchContent-based integration (replacing the git-submodule instructions)
 
 ## 0.2.0
 
