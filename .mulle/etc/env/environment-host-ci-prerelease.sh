@@ -1,22 +1,4 @@
 #
-# mulle-utf nodetype: ${MULLE__UTF_NODETYPE:-tar}
-#
-export MULLE__UTF_NODETYPE="git"
-
-
-#
-# mulle-utf url: ${MULLE__UTF_URL:-https://github.com/mulle-c/mulle-utf/archive/${MULLE_TAG}.tar.gz}
-#
-export MULLE__UTF_URL="https://github.com/mulle-c/mulle-utf.git"
-
-
-#
-# mulle-utf branch: ${MULLE__UTF_BRANCH}
-#
-export MULLE__UTF_BRANCH="prerelease"
-
-
-#
 # mulle-allocator nodetype: ${MULLE__ALLOCATOR_NODETYPE:-tar}
 #
 export MULLE__ALLOCATOR_NODETYPE="git"
@@ -32,6 +14,24 @@ export MULLE__ALLOCATOR_URL="https://github.com/mulle-c/mulle-allocator.git"
 # mulle-allocator branch: ${MULLE__ALLOCATOR_BRANCH}
 #
 export MULLE__ALLOCATOR_BRANCH="prerelease"
+
+
+#
+# mulle-buffer nodetype: ${MULLE__BUFFER_NODETYPE:-tar}
+#
+export MULLE__BUFFER_NODETYPE="git"
+
+
+#
+# mulle-buffer url: ${MULLE__BUFFER_URL:-https://github.com/mulle-c/mulle-buffer/archive/${MULLE_TAG}.tar.gz}
+#
+export MULLE__BUFFER_URL="https://github.com/mulle-c/mulle-buffer.git"
+
+
+#
+# mulle-buffer branch: ${MULLE__BUFFER_BRANCH}
+#
+export MULLE__BUFFER_BRANCH="prerelease"
 
 
 #
@@ -71,24 +71,6 @@ export MULLE__DATA_BRANCH="prerelease"
 
 
 #
-# mulle-buffer nodetype: ${MULLE__BUFFER_NODETYPE:-tar}
-#
-export MULLE__BUFFER_NODETYPE="git"
-
-
-#
-# mulle-buffer url: ${MULLE__BUFFER_URL:-https://github.com/mulle-c/mulle-buffer/archive/${MULLE_TAG}.tar.gz}
-#
-export MULLE__BUFFER_URL="https://github.com/mulle-c/mulle-buffer.git"
-
-
-#
-# mulle-buffer branch: ${MULLE__BUFFER_BRANCH}
-#
-export MULLE__BUFFER_BRANCH="prerelease"
-
-
-#
 # mulle-unicode nodetype: ${MULLE__UNICODE_NODETYPE:-tar}
 #
 export MULLE__UNICODE_NODETYPE="git"
@@ -104,5 +86,23 @@ export MULLE__UNICODE_URL="https://github.com/mulle-c/mulle-unicode.git"
 # mulle-unicode branch: ${MULLE__UNICODE_BRANCH}
 #
 export MULLE__UNICODE_BRANCH="prerelease"
+
+
+#
+# mulle-utf nodetype: ${MULLE__UTF_NODETYPE:-tar}
+#
+export MULLE__UTF_NODETYPE="git"
+
+
+#
+# mulle-utf url: ${MULLE__UTF_URL:-https://github.com/mulle-c/mulle-utf/archive/${MULLE_TAG}.tar.gz}
+#
+export MULLE__UTF_URL="https://github.com/mulle-c/mulle-utf.git"
+
+
+#
+# mulle-utf branch: ${MULLE__UTF_BRANCH}
+#
+export MULLE__UTF_BRANCH="prerelease"
 
 
