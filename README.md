@@ -20,7 +20,7 @@ an article or story. **mulle-slug** preserves case though.
 
 | Release Version                                       | Release Notes  | AI Documentation
 |-------------------------------------------------------|----------------|---------------
-| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/mulle-c/mulle-slug.svg) ![standard: C11](pix/c11.svg) ![apis: ansi](pix/apis-ansi.svg) ![memory: allocator](pix/memory-allocator.svg) ![threads: threadsafe](pix/thread-threadsafe.svg) [![Build Status](https://github.com/mulle-c/mulle-slug/workflows/CI/badge.svg)](//github.com/mulle-c/mulle-slug/actions) ![Coverage](https://img.shields.io/badge/coverage-100%25%C2%A0-2acf49) | [RELEASENOTES](RELEASENOTES.md) | [DeepWiki for mulle-slug](https://deepwiki.com/mulle-c/mulle-slug)
+| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/mulle-c/mulle-slug.svg) ![standard: C11](pix/c11.svg) ![apis: ansi](pix/apis-ansi.svg) ![memory: allocator](pix/memory-allocator.svg) ![threads: threadsafe](pix/thread-threadsafe.svg) [![Build Status](https://github.com/mulle-c/mulle-slug/workflows/CI/badge.svg)](//github.com/mulle-c/mulle-slug/actions) | [RELEASENOTES](RELEASENOTES.md) | [DeepWiki for mulle-slug](https://deepwiki.com/mulle-c/mulle-slug)
 
 
 
@@ -162,27 +162,6 @@ Add mulle-slug and its dependencies to your `CMakeLists.txt` with
 include( FetchContent)
 
 include_directories( SYSTEM "${CMAKE_BINARY_DIR}/include")
-
-set( MULLE__C11_TAG "master" CACHE STRING "branch or tag to fetch mulle-c11 from")
-
-FetchContent_Declare( MULLE__C11
-   GIT_REPOSITORY https://github.com/mulle-c/mulle-c11.git
-   GIT_TAG        "${MULLE__C11_TAG}")
-FetchContent_MakeAvailable( MULLE__C11)
-
-set( MULLE__ALLOCATOR_TAG "master" CACHE STRING "branch or tag to fetch mulle-allocator from")
-
-FetchContent_Declare( MULLE__ALLOCATOR
-   GIT_REPOSITORY https://github.com/mulle-c/mulle-allocator.git
-   GIT_TAG        "${MULLE__ALLOCATOR_TAG}")
-FetchContent_MakeAvailable( MULLE__ALLOCATOR)
-
-set( MULLE__DATA_TAG "master" CACHE STRING "branch or tag to fetch mulle-data from")
-
-FetchContent_Declare( MULLE__DATA
-   GIT_REPOSITORY https://github.com/mulle-c/mulle-data.git
-   GIT_TAG        "${MULLE__DATA_TAG}")
-FetchContent_MakeAvailable( MULLE__DATA)
 
 set( MULLE__UTF_TAG "master" CACHE STRING "branch or tag to fetch mulle-utf from")
 
